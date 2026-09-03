@@ -5,10 +5,667 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>なぜ悟空はチチと結婚したのか？｜四星球のキセキ 〜初期ドラゴンボール徹底考察〜</title>
   <meta name="description" content="初期ドラゴンボール（無印・少年期）に特化した考察ブログ。なぜブルマではなくチチだったのか？悟空の「約束」の重さを徹底解説。">
-  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Noto+Sans+JP:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&family=Cinzel:wght@700&family=Noto+Sans+JP:wght@400;700;900&family=Shippori+Mincho:wght@600;800&display=swap" rel="stylesheet">
+  
+  <style>
+    @charset "UTF-8";
+
+    :root {
+      --primary-orange: #ff6600;
+      --secondary-orange: #ff9900;
+      --db-yellow: #ffcc00;
+      --dark-bg: #111116;
+      --card-bg: rgba(30, 30, 36, 0.88);
+      --bg-card-hover: #1c2029;
+      --text-main: #e0e0e0;
+      --text-sub: #b5b5c0;
+      --border-color: rgba(255, 255, 255, 0.15);
+      --font-en: 'Chakra Petch', sans-serif;
+      --font-jp: 'Noto Sans JP', sans-serif;
+      --font-title: 'Shippori Mincho', serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--dark-bg);
+      background-image: 
+        linear-gradient(rgba(17, 17, 22, 0.5), rgba(17, 17, 22, 0.6)),
+        url('4.png');
+      background-repeat: no-repeat;
+      background-position: center top;
+      background-size: cover;
+      background-attachment: fixed;
+      color: var(--text-main);
+      font-family: var(--font-jp);
+      line-height: 1.8;
+      word-wrap: break-word;
+      padding-bottom: 60px;
+    }
+
+    .wrap {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    a {
+      color: var(--secondary-orange);
+      text-decoration: none;
+      transition: opacity 0.3s;
+    }
+
+    a:hover {
+      opacity: 0.8;
+    }
+
+    /* ヘッダー & 言語切替ボタン */
+    .top-announcement {
+      background: var(--primary-orange);
+      color: #fff;
+      text-align: center;
+      padding: 6px 10px;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    .site-header {
+      background-color: rgba(17, 17, 22, 0.9);
+      border-bottom: 2px solid var(--primary-orange);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 20px;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .site-branding .logo {
+      font-size: 1.4rem;
+      font-weight: 900;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .db-star {
+      color: var(--db-yellow);
+    }
+
+    .sub-title {
+      display: block;
+      font-size: 0.75rem;
+      color: var(--text-sub);
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 15px;
+      font-size: 0.9rem;
+    }
+
+    .main-nav a {
+      color: var(--text-main);
+    }
+
+    .lang-switch {
+      display: flex;
+      gap: 5px;
+      background: rgba(0, 0, 0, 0.6);
+      padding: 3px;
+      border-radius: 20px;
+      border: 1px solid var(--border-color);
+    }
+
+    .lang-btn {
+      background: none;
+      border: none;
+      color: var(--text-sub);
+      padding: 4px 12px;
+      font-size: 0.8rem;
+      font-weight: bold;
+      font-family: var(--font-en);
+      cursor: pointer;
+      border-radius: 15px;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .lang-btn.active {
+      background: var(--primary-orange);
+      color: #fff;
+    }
+
+    .flag-icon {
+      width: 18px;
+      height: 12px;
+      object-fit: cover;
+      border-radius: 1px;
+      display: inline-block;
+      vertical-align: middle;
+      box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    }
+
+    /* ヒーローセクション */
+    .hero-concept {
+      background: linear-gradient(180deg, rgba(255, 102, 0, 0.15) 0%, rgba(17, 17, 22, 0.7) 100%);
+      text-align: center;
+      padding: 50px 20px 30px;
+      border-bottom: 1px solid var(--border-color);
+      backdrop-filter: blur(4px);
+    }
+
+    .hero-badge {
+      display: inline-block;
+      font-family: var(--font-en);
+      background: rgba(0, 0, 0, 0.8);
+      color: var(--db-yellow);
+      border: 1px solid var(--db-yellow);
+      padding: 2px 12px;
+      font-size: 0.8rem;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+
+    .catchphrase {
+      font-size: 1.8rem;
+      font-weight: 900;
+      color: #fff;
+      text-shadow: 0 0 12px rgba(255, 102, 0, 0.8), 0 0 2px #000;
+      margin-bottom: 15px;
+    }
+
+    .concept-desc {
+      font-size: 0.95rem;
+      color: #e0e0e0;
+      max-width: 700px;
+      margin: 0 auto;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    }
+
+    /* メイン記事エリア */
+    .article-head {
+      margin: 40px 0 20px;
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    .kicker {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.85rem;
+      color: var(--secondary-orange);
+      margin-bottom: 10px;
+    }
+
+    .episode-tag {
+      background: var(--primary-orange);
+      color: #fff;
+      padding: 2px 6px;
+      font-weight: bold;
+      border-radius: 3px;
+      font-family: var(--font-en);
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      line-height: 1.4;
+      color: #fff;
+    }
+
+    .title-highlight {
+      color: var(--primary-orange);
+    }
+
+    .card-style, .content-block {
+      background-color: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .content-block h2 {
+      font-size: 1.3rem;
+      color: #fff;
+      border-bottom: 2px solid var(--primary-orange);
+      padding-bottom: 10px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .num-badge {
+      font-family: var(--font-en);
+      background: var(--primary-orange);
+      color: #fff;
+      font-size: 0.9rem;
+      padding: 2px 8px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .content-block p {
+      margin-bottom: 15px;
+    }
+
+    .content-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .pull-quote {
+      background: rgba(255, 153, 0, 0.1);
+      border-left: 4px solid var(--secondary-orange);
+      padding: 15px 20px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      color: #fff;
+      margin: 30px 0;
+      backdrop-filter: blur(5px);
+    }
+
+    .speech-bubble {
+      background: rgba(42, 42, 53, 0.9);
+      border: 2px solid var(--db-yellow);
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--db-yellow);
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+    }
+
+    /* 画像領域 */
+    .hero-image, .gallery-item {
+      margin-bottom: 30px;
+    }
+
+    .image-wrapper, .gallery-item {
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid var(--border-color);
+      background: rgba(0, 0, 0, 0.4);
+      min-height: 150px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    figcaption {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      text-align: center;
+      margin-top: 8px;
+      text-shadow: 0 1px 2px #000;
+    }
+
+    .image-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    /* 名言セクション */
+    .quotes-section {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 35px 30px;
+      margin-top: 50px;
+      margin-bottom: 40px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+      backdrop-filter: blur(8px);
+    }
+
+    .section-title {
+      font-family: var(--font-title);
+      color: #fff;
+      font-size: 1.4rem;
+      margin-bottom: 12px;
+      text-align: center;
+    }
+
+    .section-lead {
+      font-size: 0.95rem;
+      color: var(--text-sub);
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .quote-category {
+      margin-bottom: 35px;
+    }
+
+    .category-title {
+      font-size: 1.1rem;
+      color: var(--db-yellow);
+      border-bottom: 1px solid var(--border-color);
+      padding-bottom: 8px;
+      margin-bottom: 20px;
+    }
+
+    .quote-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid var(--border-color);
+      border-left: 3px solid var(--primary-orange);
+      border-radius: 6px;
+      padding: 20px;
+      margin-bottom: 15px;
+      transition: transform 0.2s, background-color 0.2s;
+    }
+
+    .quote-card:hover {
+      background: var(--bg-card-hover);
+      transform: translateY(-2px);
+    }
+
+    .quote-text {
+      font-family: var(--font-title);
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .quote-meta {
+      font-size: 0.8rem;
+      color: var(--text-sub);
+      margin-bottom: 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    }
+
+    .quote-desc {
+      font-size: 0.9rem;
+      color: var(--text-main);
+      margin-bottom: 0;
+    }
+
+    /* コールアウト */
+    .callout {
+      background: rgba(30, 30, 36, 0.88);
+      border: 1px solid var(--primary-orange);
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+
+    /* SNSシェア */
+    .share-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .share-link {
+      padding: 6px 12px;
+      border-radius: 4px;
+      color: #fff;
+      font-size: 0.85rem;
+      font-weight: bold;
+    }
+
+    .btn-twitter { background: #1da1f2; }
+    .btn-line { background: #06c755; }
+
+    /* インタラクティブエリア */
+    .poll-section, .interactive-poll {
+      background: linear-gradient(135deg, rgba(31, 26, 36, 0.9) 0%, rgba(17, 17, 22, 0.9) 100%);
+      border: 2px dashed var(--secondary-orange);
+      padding: 25px;
+      border-radius: 8px;
+      text-align: center;
+      margin-bottom: 40px;
+      backdrop-filter: blur(8px);
+    }
+
+    .poll-badge {
+      font-family: var(--font-en);
+      color: var(--secondary-orange);
+      font-size: 0.8rem;
+      margin-bottom: 5px;
+      display: inline-block;
+    }
+
+    .poll-title {
+      color: #fff;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .poll-question {
+      margin-bottom: 20px;
+      font-weight: bold;
+      color: #fff;
+      font-size: 1.05rem;
+    }
+
+    .poll-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+
+    .poll-btn {
+      background: rgba(30, 30, 36, 0.9);
+      border: 1px solid var(--primary-orange);
+      color: #fff;
+      padding: 12px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      text-align: left;
+      transition: all 0.3s;
+      font-family: var(--font-jp);
+    }
+
+    .poll-btn:hover {
+      background: var(--primary-orange);
+    }
+
+    .poll-note {
+      font-size: 0.78rem;
+      color: var(--text-sub);
+      margin-bottom: 0;
+    }
+
+    /* プロフィール */
+    .profile-card {
+      background: var(--card-bg);
+      border-left: 5px solid var(--primary-orange);
+      padding: 25px;
+      border-radius: 0 8px 8px 0;
+      margin-bottom: 40px;
+      backdrop-filter: blur(8px);
+    }
+
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 15px;
+    }
+
+    .avatar-icon {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-orange);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .profile-tagline {
+      font-size: 0.85rem;
+      color: var(--text-sub);
+    }
+
+    /* お問い合わせ */
+    .contact-section {
+      background: var(--card-bg);
+      padding: 25px;
+      border-radius: 8px;
+      margin-bottom: 40px;
+      backdrop-filter: blur(8px);
+    }
+
+    .contact-section h2 {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .contact-desc {
+      font-size: 0.9rem;
+      color: var(--text-sub);
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-size: 0.85rem;
+      margin-bottom: 5px;
+      color: var(--text-main);
+    }
+
+    input[type="text"], input[type="email"], textarea {
+      width: 100%;
+      padding: 10px;
+      background: rgba(17, 17, 22, 0.8);
+      border: 1px solid var(--border-color);
+      border-radius: 4px;
+      color: #fff;
+      font-family: inherit;
+    }
+
+    input:focus, textarea:focus {
+      outline: none;
+      border-color: var(--primary-orange);
+    }
+
+    .submit-btn {
+      width: 100%;
+      background: var(--primary-orange);
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .submit-btn:hover {
+      background: var(--secondary-orange);
+    }
+
+    /* 免責事項 */
+    .disclaimer-section {
+      font-size: 0.75rem;
+      color: #aaa;
+      border-top: 1px solid var(--border-color);
+      padding-top: 20px;
+      margin-bottom: 40px;
+      text-shadow: 0 1px 2px #000;
+    }
+
+    .disclaimer-section h3 {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .disclaimer-text p {
+      margin-bottom: 8px;
+    }
+
+    /* フッター */
+    .site-footer {
+      background: rgba(9, 9, 12, 0.95);
+      border-top: 1px solid var(--border-color);
+      padding: 30px 0;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-sub);
+    }
+
+    .copyright {
+      margin-top: 10px;
+      font-family: var(--font-en);
+      font-size: 0.75rem;
+    }
+
+    /* レスポンシブ */
+    @media (max-width: 600px) {
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      
+      .main-nav {
+        width: 100%;
+        justify-content: space-between;
+        font-size: 0.8rem;
+      }
+
+      .lang-switch {
+        align-self: flex-end;
+      }
+
+      .catchphrase {
+        font-size: 1.4rem;
+      }
+
+      h1 {
+        font-size: 1.4rem;
+      }
+
+      .image-gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .quotes-section {
+        padding: 20px 15px;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -17,25 +674,31 @@
     <span>★☆★ 初期DB（無印・少年期）徹底考察ファンサイト ★☆★</span>
   </div>
 
-  <!-- ヘッダー / 言語切り替え -->
+  <!-- ヘッダー -->
   <header class="site-header">
     <div class="wrap header-inner">
       <div class="site-branding">
-        <a class="logo" href="index.html">
+        <a class="logo" href="#">
           <span class="db-star">★</span>四星球のキセキ
         </a>
-        <span class="sub-title">〜初期ドラゴンボール徹底考察〜</span>
+        <span class="sub-title" 
+              data-ja="〜初期ドラゴンボール徹底考察〜" 
+              data-fr="〜 Étude approfondie du début de Dragon Ball 〜">〜初期ドラゴンボール徹底考察〜</span>
       </div>
       <nav class="main-nav">
-        <a href="#article"><span data-lang="ja">最新考察</span><span data-lang="en">Essay</span><span data-lang="fr">Article</span></a>
-        <a href="#poll"><span data-lang="ja">ファン投票</span><span data-lang="en">Poll</span><span data-lang="fr">Sondage</span></a>
-        <a href="#about"><span data-lang="ja">管理人</span><span data-lang="en">About</span><span data-lang="fr">À propos</span></a>
-        <a href="#contact"><span data-lang="ja">お問い合わせ</span><span data-lang="en">Contact</span><span data-lang="fr">Contact</span></a>
+        <a href="#article"><span data-ja="最新考察" data-fr="Article">最新考察</span></a>
+        <a href="#quotes"><span data-ja="名言考察" data-fr="Citations">名言考察</span></a>
+        <a href="#poll"><span data-ja="ファン投票" data-fr="Sondage">ファン投票</span></a>
+        <a href="#about"><span data-ja="管理人" data-fr="À propos">管理人</span></a>
+        <a href="#contact"><span data-ja="お問い合わせ" data-fr="Contact">お問い合わせ</span></a>
       </nav>
       <div class="lang-switch">
-        <button class="lang-btn active" data-set-lang="ja">JA</button>
-        <button class="lang-btn" data-set-lang="en">EN</button>
-        <button class="lang-btn" data-set-lang="fr">FR</button>
+        <button class="lang-btn active" data-lang="ja">
+          <img src="jp.png" alt="Japan Flag" class="flag-icon"> JA
+        </button>
+        <button class="lang-btn" data-lang="fr">
+          <img src="fr.png" alt="France Flag" class="flag-icon"> FR
+        </button>
       </div>
     </div>
   </header>
@@ -44,8 +707,12 @@
   <section class="hero-concept">
     <div class="wrap">
       <div class="hero-badge">OFFICIAL FAN ESSAY</div>
-      <h2 class="catchphrase">「世界最強の原点は、ここにある。」</h2>
-      <p class="concept-desc">
+      <h2 class="catchphrase" 
+          data-ja="「世界最強の原点は、ここにある。」" 
+          data-fr="« Origine de la force ultime : Tout commence ici. »">「世界最強の原点は、ここにある。」</h2>
+      <p class="concept-desc" 
+         data-ja="泥臭くも熱かった天下一武道会、筋斗雲で駆け抜けた荒野、命がけの技の工夫——。&#10;バトルがインフレする前の『ドラゴンボール（無印・少年期）』に特化し、悟空たちの冒険と人間ドラマを愛を持って解き明かす考察基地。" 
+         data-fr="Le Championnat du Monde des Arts Martiaux intense et acharné, les déserts traversés sur le Kinto-un, l'ingéniosité des techniques au péril de la vie——.&#10;Un site d'analyse dédié au début de « Dragon Ball » avant l'escalade des puissances, explorant avec passion les aventures et le drame humain de Goku et ses amis.">
         泥臭くも熱かった天下一武道会、筋斗雲で駆け抜けた荒野、命がけの技の工夫——。<br>
         バトルがインフレする前の『ドラゴンボール（無印・少年期）』に特化し、悟空たちの冒険と人間ドラマを愛を持って解き明かす考察基地。
       </p>
@@ -59,14 +726,13 @@
     <header id="article" class="article-head">
       <div class="kicker">
         <span class="episode-tag">ESSAY #02</span>
-        <span data-lang="ja">少年期〜青年期考察</span>
-        <span data-lang="en">Childhood Era</span>
-        <span data-lang="fr">Enfance</span>
+        <span data-ja="少年期〜青年期考察" data-fr="Enfance">少年期〜青年期考察</span>
       </div>
       <h1>
-        <span data-lang="ja">なぜ悟空はチチと結婚したのか？<br><span class="title-highlight">ブルマとの出会い</span>から振り返る「約束」の重さ</span>
-        <span data-lang="en">Why Did Goku Marry Chichi?<br>The Weight of Goku's Promise</span>
-        <span data-lang="fr">Pourquoi Sangoku a-t-il épousé Chichi ?<br>La portée de sa promesse</span>
+        <span data-ja="なぜ悟空はチチと結婚したのか？<br><span class='title-highlight'>ブルマとの出会い</span>から振り返る「約束」の重さ" 
+              data-fr="Pourquoi Sangoku a-t-il épousé Chichi ?<br>La portée de sa promesse">
+          なぜ悟空はチチと結婚したのか？<br><span class="title-highlight">ブルマとの出会い</span>から振り返る「約束」の重さ
+        </span>
       </h1>
     </header>
 
@@ -74,16 +740,10 @@
       
       <!-- 記事導入 -->
       <section class="intro card-style">
-        <div data-lang="ja">
-          <p>『ドラゴンボール』の主人公・孫悟空。彼は物語の終盤、地球を救う最強の戦士へと成長しますが、その原点は少年時代の「出会い」にありました。</p>
-          <p>数あるエピソードの中でも、ファンを驚かせたのが<strong>第23回天下一武道会でのチチとの電撃結婚</strong>です。なぜ、最初のヒロインであるブルマではなくチチだったのか？今回は、悟空の「出会いから結婚」までの軌跡を振り返り、悟空という男の誠実さについて考察します。</p>
-        </div>
-        <div data-lang="en">
-          <p>Goku grows into the universe's strongest warrior, but his origin lies in childhood encounters. Why Chichi and not Bulma? Let's trace his journey from encounter to marriage and examine Goku's sincerity.</p>
-        </div>
-        <div data-lang="fr">
-          <p>Sangoku devient le plus grand guerrier de l'univers, mais ses origines résident dans ses rencontres d'enfance. Pourquoi Chichi et non Bulma ? Retour sur ce parcours et sur la sincérité de Sangoku.</p>
-        </div>
+        <p data-ja="『ドラゴンボール』の主人公・孫悟空。彼は物語の終盤、地球を救う最強の戦士へと成長しますが、その原点は少年時代の「出会い」にありました。" 
+           data-fr="Sangoku devient le plus grand guerrier de l'univers, mais ses origines résident dans ses rencontres d'enfance.">『ドラゴンボール』の主人公・孫悟空。彼は物語の終盤、地球を救う最強の戦士へと成長しますが、その原点は少年時代の「出会い」にありました。</p>
+        <p data-ja="数あるエピソードの中でも、ファンを驚かせたのが第23回天下一武道会でのチチとの電撃結婚です。なぜ、最初のヒロインであるブルマではなくチチだったのか？今回は、悟空の「出会いから結婚」までの軌跡を振り返り、悟空という男の誠実さについて考察します。" 
+           data-fr="Pourquoi Chichi et non Bulma ? Retour sur ce parcours et sur la sincérité de Sangoku.">数あるエピソードの中でも、ファンを驚かせたのが第23回天下一武道会でのチチとの電撃結婚です。なぜ、最初のヒロインであるブルマではなくチチだったのか？今回は、悟空の「出会いから結婚」までの軌跡を振り返り、悟空という男の誠実さについて考察します。</p>
       </section>
 
       <!-- アイキャッチ画像（1.png） -->
@@ -91,139 +751,355 @@
         <div class="image-wrapper">
           <img src="1.png" alt="山奥で四星球を手に旅の始まりを迎える悟空とブルマ">
         </div>
-        <figcaption>
-          <span data-lang="ja">すべては、この一つの球との出会いから始まった（イメージイラスト）</span>
-          <span data-lang="en">It all started with a single ball</span>
-          <span data-lang="fr">Tout a commencé avec une seule boule</span>
-        </figcaption>
+        <figcaption data-ja="すべては、この一つの球との出会いから始まった（イメージイラスト）" 
+                   data-fr="Tout a commencé avec une seule boule">すべては、この一つの球との出会いから始まった（イメージイラスト）</figcaption>
       </figure>
 
       <!-- セクション 1 -->
       <section class="content-block">
-        <h2><span class="num-badge">01</span> すべての始まり：ブルマとの「利害関係」から始まった冒険</h2>
-        <div data-lang="ja">
-          <p>物語の第1話、山奥で暮らしていた悟空は、少女ブルマと衝撃的な出会いを果たします。</p>
-          <p>ブルマにとって悟空は「ドラゴンボールを探すための便利なボディーガード」であり、悟空にとってもブルマは「じいちゃんの形見（四星球）を一緒に探す旅の連れ」でした。</p>
-          <p>お互いに恋愛感情は一切なく、むしろ「都会の常識」と「大自然の野生児」という真逆のコンビだからこそ、初期のコミカルでワクワクする冒険が生まれました。ブルマは当時「素敵な恋人」を探していましたが、幼すぎる悟空は最初から恋愛対象外だったのです。</p>
-        </div>
-        <div data-lang="en">
-          <p>In Episode 1, Goku meets Bulma. To Bulma, Goku was a bodyguard. To Goku, she was a companion to search for his grandfather's keepsake. There was no romance—just two opposites embarking on a comical adventure.</p>
-        </div>
-        <div data-lang="fr">
-          <p>Au premier épisode, Sangoku rencontre Bulma. Pour elle, il est un garde du corps. Pour lui, elle est une coéquipière. Sans la moindre romance, ce duo mal assorti donne naissance à une aventure captivante.</p>
-        </div>
+        <h2><span class="num-badge">01</span> <span data-ja="すべての始まり：ブルマとの「利害関係」から始まった冒険" data-fr="Le commencement : Une aventure née d'un « intérêt mutuel » avec Bulma">すべての始まり：ブルマとの「利害関係」から始まった冒険</span></h2>
+        <p data-ja="物語の第1話、山奥で暮らしていた悟空は、少女ブルマと衝撃的な出会いを果たします。" 
+           data-fr="Au premier épisode, Sangoku rencontre Bulma au profond des montagnes.">物語の第1話、山奥で暮らしていた悟空は、少女ブルマと衝撃的な出会いを果たします。</p>
+        <p data-ja="ブルマにとって悟空は「ドラゴンボールを探すための便利なボディーガード」であり、悟空にとってもブルマは「じいちゃんの形見（四星球）を一緒に探す旅の連れ」でした。" 
+           data-fr="Pour Bulma, Sangoku était un garde du corps utile. Pour Sangoku, elle était une coéquipière pour retrouver le souvenir de son grand-père.">ブルマにとって悟空は「ドラゴンボールを探すための便利なボディーガード」であり、悟空にとってもブルマは「じいちゃんの形見（四星球）を一緒に探す旅の連れ」でした。</p>
+        <p data-ja="お互いに恋愛感情は一切なく、むしろ「都会の常識」と「大自然の野生児」という真逆のコンビだからこそ、初期のコミカルでワクワクする冒険が生まれました。ブルマは当時「素敵な恋人」を探していましたが、幼すぎる悟空は最初から恋愛対象外だったのです。" 
+           data-fr="Sans la moindre romance, ce duo totalement opposé donne naissance à une aventure originale et palpitante.">お互いに恋愛感情は一切なく、むしろ「都会の常識」と「大自然の野生児」という真逆のコンビだからこそ、初期のコミカルでワクワクする冒険が生まれました。ブルマは当時「素敵な恋人」を探していましたが、幼すぎる悟空は最初から恋愛対象外だったのです。</p>
       </section>
 
       <!-- セクション 2 -->
       <section class="content-block">
-        <h2><span class="num-badge">02</span> チチとの出会いと、あまりにも有名な「あやふやな約束」</h2>
-        <div data-lang="ja">
-          <p>その後、フライパン山で出会ったのが牛魔王の娘・チチです。</p>
-          <p>チチは純粋な悟空に惹かれ、別れ際に「大きくなったら嫁に貰いに来ておくれ」と約束を迫ります。しかし、当時の悟空は「結婚（けっこん）」が何のことか分かっていませんでした。</p>
-          <p>「（美味いもんだと思って）んだ！」と答えてしまったこの口約束が、のちに2人の運命を決定づけることになります。悟空にとってはただの勘違い、しかしチチにとっては人生をかけた本気の約束でした。</p>
-        </div>
-        <div data-lang="en">
-          <p>At Mt. Frypan, Goku meets Chichi. She falls for him and asks him to marry her when they grow up. Goku, misunderstanding "marriage" for something tasty, agrees.</p>
-        </div>
-        <div data-lang="fr">
-          <p>Au mont Frypan, Sangoku rencontre Chichi. Elle tombe amoureuse de lui et lui demande de l'épouser plus tard. Sangoku, confondant « mariage » et nourriture, accepte sans comprendre.</p>
-        </div>
+        <h2><span class="num-badge">02</span> <span data-ja="チチとの出会いと、あまりにも有名な「あやふやな約束」" data-fr="La rencontre avec Chichi et la célèbre « promesse ambiguë »">チチとの出会いと、あまりにも有名な「あやふやな約束」</span></h2>
+        <p data-ja="その後、フライパン山で出会ったのが牛魔王の娘・チチです。当時の悟空は「結婚」を美味しい食べ物か何かだと完全に勘違いしていました。" 
+           data-fr="Plus tard, Sangoku rencontre Chichi au mont Frypan. À l'époque, Goku pensait que le « mariage » était une sorte de nourriture délicieuse.">その後、フライパン山で出会ったのが牛魔王の娘・チチです。当時の悟空は「結婚」を美味しい食べ物か何かだと完全に勘違いしていました。</p>
+        <p data-ja="チチは純粋な悟空に惹かれ、別れ際に「大きくなったら嫁に貰いに来ておくれ」と約束を迫ります。しかし、当時の悟空は「結婚（けっこん）」が何のことか分かっていませんでした。" 
+           data-fr="Chichi tombe amoureuse de lui et lui demande de l'épouser plus tard. Sangoku ne comprenait pas ce qu'était le mariage.">チチは純粋な悟空に惹かれ、別れ際に「大きくなったら嫁に貰いに来ておくれ」と約束を迫ります。しかし、当時の悟空は「結婚（けっこん）」が何のことか分かっていませんでした。</p>
+        <p data-ja="「（美味いもんだと思って）んだ！」と答えてしまったこの口約束が、のちに2人の運命を決定づけることになります。悟空にとってはただの勘違い、しかしチチにとっては人生をかけた本気の約束でした。" 
+           data-fr="Pensant que c'était de la nourriture, Sangoku a accepté. Un malentendu pour Goku, mais une promesse sacrée pour Chichi.">「（美味いもんだと思って）んだ！」と答えてしまったこの口約束が、のちに2人の運命を決定づけることになります。悟空にとってはただの勘違い、しかしチチにとっては人生をかけた本気の約束でした。</p>
       </section>
 
-      <div class="pull-quote">
-        <span data-lang="ja">勘違いから始まった約束を、決して裏切らない「男の純粋さ」。</span>
-        <span data-lang="en">A promise born of confusion, kept with pure integrity.</span>
-        <span data-lang="fr">Une promesse née d'un malentendu, tenue avec une pure intégrité.</span>
+      <div class="pull-quote" 
+           data-ja="勘違いから始まった約束を、決して裏切らない「男の純粋さ」。" 
+           data-fr="Une promesse née d'un malentendu, tenue avec une pure intégrité.">
+        勘違いから始まった約束を、決して裏切らない「男の純粋さ」。
       </div>
 
-      <!-- サブ画像ギャラリー（2.jpg / 3.png） -->
+      <!-- サブ画像ギャラリー -->
       <div class="image-gallery">
         <figure class="gallery-item">
           <img src="2.jpg" alt="武道会での悟空とチチの再会">
-          <figcaption>武道会での衝撃の再会シーン（イメージ）</figcaption>
+          <figcaption data-ja="武道会での衝撃の再会シーン（イメージ）" data-fr="Retrouvailles au Championnat">武道会での衝撃の再会シーン（イメージ）</figcaption>
         </figure>
         <figure class="gallery-item">
           <img src="3.png" alt="成長した悟空とチチのプロポーズ">
-          <figcaption>リング上での電撃プロポーズ（イメージ）</figcaption>
+          <figcaption data-ja="リング上での電撃プロポーズ（イメージ）" data-fr="Demande en mariage sur le ring">リング上での電撃プロポーズ（イメージ）</figcaption>
         </figure>
       </div>
 
       <!-- セクション 3 -->
       <section class="content-block">
-        <h2><span class="num-badge">03</span> なぜブルマではなくチチだったのか？</h2>
-        <div data-lang="ja">
-          <p>もしブルマが悟空の成長を待っていれば、2人が結ばれる未来はあったのでしょうか？</p>
-          <p>のちの「人造人間編」で、たくましく成長した悟空を見たブルマが「あたしが付き合っちゃえばよかったかな」と冗談めかして呟くシーンがあります。しかし、ブルマと悟空は「何でも言い合える親友（相棒）」のポジションを確立しすぎていました。</p>
-          <p>一方でチチは、悟空がどれだけ有名になろうと、世界を救う英雄になろうと、一途に「フライパン山での約束」だけを信じて自分を磨き続けていました。この「一途さ」こそが、のちに悟空の心を動かす最大の要因となります。</p>
-        </div>
-        <div data-lang="en">
-          <p>Goku and Bulma became irreplaceable best friends rather than lovers. On the other hand, Chichi held onto that single promise at Mt. Frypan with unwavering devotion.</p>
-        </div>
-        <div data-lang="fr">
-          <p>Sangoku et Bulma sont devenus de grands amis. En revanche, Chichi est restée fidèle à la promesse du mont Frypan pendant des années.</p>
-        </div>
+        <h2><span class="num-badge">03</span> <span data-ja="なぜブルマではなくチチだったのか？" data-fr="Pourquoi Chichi et non Bulma ?">なぜブルマではなくチチだったのか？</span></h2>
+        <p data-ja="もしブルマが悟空の成長を待っていれば、2人が結ばれる未来はあったのでしょうか？" 
+           data-fr="Un avenir ensemble aurait-il été possible entre Bulma et Sangoku ?">もしブルマが悟空の成長を待っていれば、2人が結ばれる未来はあったのでしょうか？</p>
+        <p data-ja="のちの「人造人間編」で、たくましく成長した悟空を見たブルマが「あたしが付き合っちゃえばよかったかな」と冗談めかして呟くシーンがあります。しかし、ブルマと悟空は「何でも言い合える親友（相棒）」のポジションを確立しすぎていました。" 
+           data-fr="Sangoku et Bulma sont devenus de grands amis proches plutôt que des amoureux.">のちの「人造人間編」で、たくましく成長した悟空を見たブルマが「あたしが付き合っちゃえばよかったかな」と冗談めかして呟くシーンがあります。しかし、ブルマと悟空は「何でも言い合える親友（相棒）」のポジションを確立しすぎていました。</p>
+        <p data-ja="一方でチチは、悟空がどれだけ有名になろうと、世界を救う英雄になろうと、一途に「フライパン山での約束」だけを信じて自分を磨き続けていました。この「一途さ」こそが、のちに悟空の心を動かす最大の要因となります。" 
+           data-fr="En revanche, Chichi est restée fidèle à la promesse du mont Frypan pendant toutes ces années.">一方でチチは、悟空がどれだけ有名になろうと、世界を救う英雄になろうと、一途に「フライパン山での約束」だけを信じて自分を磨き続けていました。この「一途さ」こそが、のちに悟空の心を動かす最大の要因となります。</p>
       </section>
 
       <!-- セクション 4 -->
       <section class="content-block">
-        <h2><span class="num-badge">04</span> 天下一武道会での再会：男・悟空が見せた「究極の筋の通し方」</h2>
-        <div data-lang="ja">
-          <p>数年後、大人になったチチは、約束を忘れてしまった悟空に会うために天下一武道会へ匿名で出場します。リングの上で正体を明かされ、自分がした約束の内容を初めて理解した悟空。</p>
-          <p>ここで悟空が放った一言は、彼の人間性を象徴しています。</p>
-          
-          <!-- 吹き出しUI -->
-          <div class="speech-bubble">
-            「約束しちゃったから、結婚すっか！」
-          </div>
+        <h2><span class="num-badge">04</span> <span data-ja="天下一武道会での再会：男・悟空が見せた「究極の筋の通し方」" data-fr="Retrouvailles au Championnat : Le sens ultime de l'honneur selon Goku">天下一武道会での再会：男・悟空が見せた「究極の筋の通し方」</span></h2>
+        <p data-ja="数年後、大人になったチチは、約束を忘れてしまった悟空に会うために天下一武道会へ匿名で出場します。リングの上で正体を明かされ、自分がした約束の内容を初めて理解した悟空。" 
+           data-fr="Des années plus tard, Chichi participe anonymement au Championnat pour retrouver Sangoku.">数年後、大人になったチチは、約束を忘れてしまった悟空に会うために天下一武道会へ匿名で出場します。リングの上で正体を明かされ、自分がした約束の内容を初めて理解した悟空。</p>
+        <p data-ja="ここで再会した際、正体を明かしたチチに対して悟空が返した言葉は「約束しちゃったから、結婚すっか！」というあっさりとした、しかし究極に誠実な一言でした。" 
+           data-fr="Lors de leurs retrouvailles au 23e Championnat, la réponse de Goku est simple mais extrêmement sincère : « J'ai promis, alors marions-nous ! ».">ここで再会した際、正体を明かしたチチに対して悟空が返した言葉は「約束しちゃったから、結婚すっか！」というあっさりとした、しかし究極に誠実な一言でした。</p>
+        
+        <div class="speech-bubble" 
+             data-ja="「約束しちゃったから、結婚すっか！」" 
+             data-fr="« J'ai promis, alors marions-nous ! »">
+          「約束しちゃったから、結婚すっか！」
+        </div>
 
-          <p>普通なら「子供の頃の勘違いだから」と言い訳してもおかしくない場面です。しかし悟空は、自分が口にした言葉にどこまでも誠実でした。恋愛感情から始まった結婚ではなく、「一度交わした約束は、どんな理由であれ絶対に守る」という、悟空の真っ直ぐな義理堅さがこの結婚劇には詰まっています。</p>
+        <p data-ja="普通なら「子供の頃の勘違いだから」と言い訳してもおかしくない場面です。しかし悟空は、自分が口にした言葉にどこまでも誠実でした。恋愛感情から始まった結婚ではなく、「一度交わした約束は、どんな理由であれ絶対に守る」という、悟空の真っ直ぐな義理堅さがこの結婚劇には詰まっています。" 
+           data-fr="Sans chercher d'excuses, il a honoré sa parole avec la plus grande sincérité. Une promesse faite est une promesse tenue.">普通なら「子供の頃の勘違いだから」と言い訳してもおかしくない場面です。しかし悟空は、自分が口にした言葉にどこまでも誠実でした。恋愛感情から始まった結婚ではなく、「一度交わした約束は、どんな理由であれ絶対に守る」という、悟空の真っ直ぐな義理堅さがこの結婚劇には詰まっています。</p>
+      </section>
+
+      <!-- 名言・決めセリフ セクション -->
+      <section id="quotes" class="quotes-section">
+        <h3 class="section-title" 
+            data-ja="【決定版】魂を揺さぶる！初期DBの名言・決めセリフ完全補完" 
+            data-fr="【Édition définitive】Citations et répliques cultes du début de DB">
+            【決定版】魂を揺さぶる！初期DBの名言・決めセリフ完全補完
+        </h3>
+        <p class="section-lead" 
+           data-ja="バトルが激化する前の初期ドラゴンボールは、技の凄さだけでなく<strong>「人間味」と「美学」</strong>が溢れる一言に満ちています。物語を彩った名フレーズを厳選・考察しました。" 
+           data-fr="Avant l'escalade des combats, le début de Dragon Ball regorge de phrases pleines d'<strong>« humanité » et d'« esthétique »</strong>. Une sélection des plus belles citations.">
+            バトルが激化する前の初期ドラゴンボールは、技の凄さだけでなく<strong>「人間味」と「美学」</strong>が溢れる一言に満ちています。物語を彩った名フレーズを厳選・考察しました。
+        </p>
+
+        <!-- カテゴリ1：覚悟・決意編 -->
+        <div class="quote-category">
+            <h4 class="category-title" 
+                data-ja="🔥 【覚悟・決意編】（極限状態で見せた本気と信念）" 
+                data-fr="🔥 【Résolution & Détermination】(Sérieux et conviction à l'extrême)">
+                🔥 【覚悟・決意編】（極限状態で見せた本気と信念）
+            </h4>
+            
+            <div class="quote-card">
+                <blockquote class="quote-text" 
+                            data-ja="「おい… 殺されたクリリンの敵を討ちにいってもいいか…？」" 
+                            data-fr="« Dites... Je peux aller venger Krillin qui s'est fait tuer... ? »">
+                    「おい… 殺されたクリリンの敵を討ちにいってもいいか…？」
+                </blockquote>
+                <div class="quote-meta" 
+                     data-ja="<strong>発言者：</strong>孫悟空 ｜ <strong>場面：</strong>第22回天下一武道会直後（タンバリン出現時）" 
+                     data-fr="<strong>Locuteur :</strong> Sangoku ｜ <strong>Scène :</strong> Juste après le 22e Championnat (apparition de Tambourine)">
+                    <strong>発言者：</strong>孫悟空 ｜ <strong>場面：</strong>第22回天下一武道会直後（タンバリン出現時）
+                </div>
+                <p class="quote-desc" 
+                   data-ja="普段の能天気な悟空が初めて見せた「静かな怒りと深い悲しみ」。親友を奪われた憤りと、一線を超える覚悟が一言に凝縮された初期の超重要シーンです。" 
+                   data-fr="Pour la première fois, Goku montre une « colère silencieuse et une profonde tristesse ». Une scène clé qui condense la douleur de perdre son meilleur ami et sa détermination.">
+                    普段の能天気な悟空が初めて見せた「静かな怒りと深い悲しみ」。親友を奪われた憤りと、一線を超える覚悟が一言に凝縮された初期の超重要シーンです。
+                </p>
+            </div>
+
+            <div class="quote-card">
+                <blockquote class="quote-text" 
+                            data-ja="「心まで悪魔に売ったわけじゃない！」" 
+                            data-fr="« Je n'ai pas vendu mon âme au diable pour autant ! »">
+                    「心まで悪魔に売ったわけじゃない！」
+                </blockquote>
+                <div class="quote-meta" 
+                     data-ja="<strong>発言者：</strong>天津飯 ｜ <strong>場面：</strong>ピッコロ大魔王編（vs 鶴仙人）" 
+                     data-fr="<strong>Locuteur :</strong> Ten Shin Han ｜ <strong>Scène :</strong> Arc Piccolo (vs Maître Tsuru)">
+                    <strong>発言者：</strong>天津飯 ｜ <strong>場面：</strong>ピッコロ大魔王編（vs 鶴仙人）
+                </div>
+                <p class="quote-desc" 
+                   data-ja="殺し屋を目指す陰惨な道（鶴仙流）を捨て、一人の清々しい「武道家」として正義のために戦うと誓った瞬間。悪からの脱却を描いた初期最高の覚悟の一言です。" 
+                   data-fr="Le moment où il renonce à la voie sombre des assassins pour se battre en tant que noble pratiquant d'arts martiaux. Une réplique marquante sur l'affranchissement du mal.">
+                    殺し屋を目指す陰惨な道（鶴仙流）を捨て、一人の清々しい「武道家」として正義のために戦うと誓った瞬間。悪からの脱却を描いた初期最高の覚悟の一言です。
+                </p>
+            </div>
+
+            <div class="quote-card">
+                <blockquote class="quote-text" 
+                            data-ja="「約束しちゃったから、結婚すっか！」" 
+                            data-fr="« J'ai promis, alors marions-nous ! »">
+                    「約束しちゃったから、結婚すっか！」
+                </blockquote>
+                <div class="quote-meta" 
+                     data-ja="<strong>発言者：</strong>孫悟空 ｜ <strong>場面：</strong>第23回天下一武道会（vs チチ）" 
+                     data-fr="<strong>Locuteur :</strong> Sangoku ｜ <strong>Scène :</strong> 23e Championnat (vs Chichi)">
+                    <strong>発言者：</strong>孫悟空 ｜ <strong>場面：</strong>第23回天下一武道会（vs チチ）
+                </div>
+                <p class="quote-desc" 
+                   data-ja="幼少期の勘違いで交わした口約束。普通なら言いがかりと跳ね返す場面でも「自分が発した言葉は曲げない」という悟空の無垢で真っ直ぐな義理堅さが光ります。" 
+                   data-fr="Une promesse faite par malentendu durant l'enfance. Goku fait preuve d'une intégrité pure en honorant sa parole sans chercher d'excuses.">
+                    幼少期の勘違いで交わした口約束。普通なら言いがかりと跳ね返す場面でも「自分が発した言葉は曲げない」という悟空の無垢で真っ直ぐな義理堅さが光ります。
+                </p>
+            </div>
         </div>
-        <div data-lang="en">
-          <p>When her identity is revealed and Goku finally understands what marriage means, he simply says: "Well, I promised, so let's get married!" He kept his word with utmost sincerity.</p>
+
+        <!-- カテゴリ2：師弟・教え編 -->
+        <div class="quote-category">
+            <h4 class="category-title" 
+                data-ja="🐢 【師弟・教え編】（亀仙流が残した武道哲学）" 
+                data-fr="🐢 【Maître & Disciple】(La philosophie des arts martiaux de l'école Kame)">
+                🐢 【師弟・教え編】（亀仙流が残した武道哲学）
+            </h4>
+
+            <div class="quote-card">
+                <blockquote class="quote-text" 
+                            data-ja="「武道を習うのはな、喧嘩に勝つためではない！女にモテるためでもない！」" 
+                            data-fr="« On n'apprend pas les arts martiaux pour gagner des bagarres ! Ni pour draguer les filles ! »">
+                    「武道を習うのはな、喧嘩に勝つためではない！女にモテるためでもない！」
+                </blockquote>
+                <div class="quote-meta" 
+                     data-ja="<strong>発言者：</strong>亀仙人（武天老師） ｜ <strong>場面：</strong>カメハウスでの修業開始時" 
+                     data-fr="<strong>Locuteur :</strong> Tortue Géniale ｜ <strong>Scène :</strong> Début de l'entraînement à Kame House">
+                    <strong>発言者：</strong>亀仙人（武天老師） ｜ <strong>場面：</strong>カメハウスでの修業開始時
+                </div>
+                <p class="quote-desc" 
+                   data-ja="「武道によって心身を鍛え、人生を豊かに楽しむ」という亀仙流の根幹。単なる強さのインフレではない、ドラゴンボールという作品の人間観を決定づけた教えです。" 
+                   data-fr="Le pilier de l'école Kame : forger le corps et l'esprit pour profiter pleinement de la vie. Une leçon essentielle qui définit la philosophie de l'œuvre.">
+                    「武道によって心身を鍛え、人生を豊かに楽しむ」という亀仙流の根幹。単なる強さのインフレではない、ドラゴンボールという作品の人間観を決定づけた教えです。
+                </p>
+            </div>
+
+            <div class="quote-card">
+                <blockquote class="quote-text" 
+                            data-ja="「よく見ろ、大きな者・強い者だけが勝つとは限らんのじゃ」" 
+                            data-fr="« Regarde bien, ce ne sont pas toujours les plus grands ni les plus forts qui gagnent. »">
+                    「よく見ろ、大きな者・強い者だけが勝つとは限らんのじゃ」
+                </blockquote>
+                <div class="quote-meta" 
+                     data-ja="<strong>発言者：</strong>ジャッキー・チュン（亀仙人） ｜ <strong>場面：</strong>第21回天下一武道会（vs クリリン）" 
+                     data-fr="<strong>Locuteur :</strong> Jackie Chun ｜ <strong>Scène :</strong> 21e Championnat (vs Krillin)">
+                    <strong>発言者：</strong>ジャッキー・チュン（亀仙人） ｜ <strong>場面：</strong>第21回天下一武道会（vs クリリン）
+                </div>
+                <p class="quote-desc" 
+                   data-ja="体格や力で劣る者にも、工夫と努力の可能性を示した言葉。悟空やクリリンが「上には上がいる」と知る原点となりました。" 
+                   data-fr="Des paroles qui montrent le potentiel de l'ingéniosité et de l'effort, même face à des adversaires plus imposants.">
+                    体格や力で劣る者にも、工夫と努力の可能性を示した言葉。悟空やクリリンが「上には上がいる」と知る原点となりました。
+                </p>
+            </div>
+
+            <div class="quote-card">
+                <blockquote class="quote-text" 
+                            data-ja="「武道家なら… 負けても正々堂々と勝負を降りるべきじゃ」" 
+                            data-fr="« Un vrai pratiquant doit savoir se retirer dignement, même dans la défaite. »">
+                    「武道家なら… 負けても正々堂々と勝負を降りるべきじゃ」
+                </blockquote>
+                <div class="quote-meta" 
+                     data-ja="<strong>発言者：</strong>ジャッキー・チュン（亀仙人） ｜ <strong>場面：</strong>第22回天下一武道会（vs 天津飯）" 
+                     data-fr="<strong>Locuteur :</strong> Jackie Chun ｜ <strong>Scène :</strong> 22e Championnat (vs Ten Shin Han)">
+                    <strong>発言者：</strong>ジャッキー・チュン（亀仙人） ｜ <strong>場面：</strong>第22回天下一武道会（vs 天津飯）
+                </div>
+                <p class="quote-desc" 
+                   data-ja="若き才能の台頭を目の当たりにし、自ら引き際を決めた師匠の一言。勝利に固執せず次世代を見守る、圧倒的な器の大きさが表れています。" 
+                   data-fr="En voyant la nouvelle génération émerger, le maître choisit de céder la place. Une grandeur d'âme remarquable.">
+                    若き才能の台頭を目の当たりにし、自ら引き際を決めた師匠の一言。勝利に固執せず次世代を見守る、圧倒的な器の大きさが表れています。
+                </p>
+            </div>
         </div>
-        <div data-lang="fr">
-          <p>Quand Sangoku comprend enfin ce qu'est le mariage, il répond simplement : « J'ai promis, alors marions-nous ! » Sans chercher d'excuses, il a honoré sa parole.</p>
+
+        <!-- カテゴリ3：決めセリフ・必殺技編 -->
+        <div class="quote-category">
+            <h4 class="category-title" 
+                data-ja="⚡ 【決めセリフ・必殺技編】（記憶に刻まれた名フレーズ）" 
+                data-fr="⚡ 【Attaques & Répliques Cultes】(Phrases gravées dans les mémoires)">
+                ⚡ 【決めセリフ・必殺技編】（記憶に刻まれた名フレーズ）
+            </h4>
+
+            <div class="quote-card">
+                <blockquote class="quote-text" 
+                            data-ja="「か… め… は… め… 波ーーーっ!!!!」" 
+                            data-fr="« KA... ME... HA... ME... HA---!!!! »">
+                    「か… め… は… め… 波ーーーっ!!!!」
+                </blockquote>
+                <div class="quote-meta" 
+                     data-ja="<strong>発言者：</strong>孫悟空 / 亀仙人 ｜ <strong>場面：</strong>フライパン山消火、各種天下一武道会" 
+                     data-fr="<strong>Locuteur :</strong> Sangoku / Tortue Géniale ｜ <strong>Scène :</strong> Mont Frypan, Championnats">
+                    <strong>発言者：</strong>孫悟空 / 亀仙人 ｜ <strong>場面：</strong>フライパン山消火、各種天下一武道会
+                </div>
+                <p class="quote-desc" 
+                   data-ja="作品の代名詞。50年かかって習得した技を見ただけで再現してみせた少年悟空の「怪物的なセンス」を読者に印象づけた伝説の決めセリフです。" 
+                   data-fr="L'attaque emblématique de la série. Goku réussit à reproduire instantanément une technique qui a demandé 50 ans de maîtrise à son maître.">
+                    作品の代名詞。50年かかって習得した技を見ただけで再現してみせた少年悟空の「怪物的なセンス」を読者に印象づけた伝説の決めセリフです。
+                </p>
+            </div>
+
+            <div class="quote-card">
+                <blockquote class="quote-text" 
+                            data-ja="「へっ！ たかがパンチ一発で死ぬかよ！」" 
+                            data-fr="« Ha ! Comme si un simple coup de poing allait me tuer ! »">
+                    「へっ！ たかがパンチ一発で死ぬかよ！」
+                </blockquote>
+                <div class="quote-meta" 
+                     data-ja="<strong>発言者：</strong>クリリン ｜ <strong>場面：</strong>第21回天下一武道会・予選（vs 多林寺の先輩）" 
+                     data-fr="<strong>Locuteur :</strong> Krillin ｜ <strong>Scène :</strong> Éliminatoires du 21e Championnat">
+                    <strong>発言者：</strong>クリリン ｜ <strong>場面：</strong>第21回天下一武道会・予選（vs 多林寺の先輩）
+                </div>
+                <p class="quote-desc" 
+                   data-ja="いじめられていた過去の自分を乗り越えた瞬間。努力で掴み取った自信が溢れ出る、クリリン史上トップクラスに格好いい名セリフです。" 
+                   data-fr="Le moment où Krillin surpasse son passé d'élève persécuté. Une scène forte montrant toute sa confiance acquise par l'entraînement.">
+                    いじめられていた過去の自分を乗り越えた瞬間。努力で掴み取った自信が溢れ出る、クリリン史上トップクラスに格好いい名セリフです。
+                </p>
+            </div>
+
+            <div class="quote-card">
+                <blockquote class="quote-text" 
+                            data-ja="「タコ…！じゃなくて、おら悟空だ！」" 
+                            data-fr="« Salut... Enfin moi, c'est Goku ! »">
+                    「タコ…！じゃなくて、おら悟空だ！」
+                </blockquote>
+                <div class="quote-meta" 
+                     data-ja="<strong>発言者：</strong>孫悟空 ｜ <strong>場面：</strong>初期の冒険・各キャラとの出会い" 
+                     data-fr="<strong>Locuteur :</strong> Sangoku ｜ <strong>Scène :</strong> Premières aventures">
+                    <strong>発言者：</strong>孫悟空 ｜ <strong>場面：</strong>初期の冒険・各キャラとの出会い
+                </div>
+                <p class="quote-desc" 
+                   data-ja="世間知らずで純粋無垢な挨拶。この飾り気のない人柄があったからこそ、ヤムチャも天津飯も、かつての敵たちが彼の周りに集まっていきました。" 
+                   data-fr="Une salutation naïve et pure. C'est grâce à cette personnalité sans artifice que d'anciens rivaux sont devenus ses plus proches alliés.">
+                    世間知らずで純粋無垢な挨拶。この飾り気のない人柄があったからこそ、ヤムチャも天津飯も、かつての敵たちが彼の周りに集まっていきました。
+                </p>
+            </div>
+        </div>
+
+        <!-- 名言アンケート -->
+        <div class="interactive-poll quote-poll">
+            <span class="poll-badge">INTERACTIVE POLL</span>
+            <h4 class="poll-title">★ READERS QUESTION ★</h4>
+            <p class="poll-question" 
+               data-ja="「あなたが一番心に痺れた『初期DBの名言』はどれ？」" 
+               data-fr="« Quelle citation du début de DB vous a le plus marqué ? »">
+                「あなたが一番心に痺れた『初期DBの名言』はどれ？」
+            </p>
+            <div class="poll-options">
+                <button class="poll-btn" onclick="alert('投票ありがとうございます！')" 
+                        data-ja="🔥 「武道を習うのは喧嘩に勝つためではない！」（武道哲学）" 
+                        data-fr="🔥 « On n'apprend pas les arts martiaux pour gagner des bagarres ! »">
+                    🔥 「武道を習うのは喧嘩に勝つためではない！」（武道哲学）
+                </button>
+                <button class="poll-btn" onclick="alert('投票ありがとうございます！')" 
+                        data-ja="⚡ 「殺されたクリリンの敵を討ちにいってもいいか…？」（本気と絆）" 
+                        data-fr="⚡ « Je peux aller venger Krillin qui s'est fait tuer... ? »">
+                    ⚡ 「殺されたクリリンの敵を討ちにいってもいいか…？」（本気と絆）
+                </button>
+                <button class="poll-btn" onclick="alert('投票ありがとうございます！')" 
+                        data-ja="✨ 「約束しちゃったから、結婚すっか！」（男の義理堅さ）" 
+                        data-fr="✨ « J'ai promis, alors marions-nous ! »">
+                    ✨ 「約束しちゃったから、結婚すっか！」（男の義理堅さ）
+                </button>
+                <button class="poll-btn" onclick="alert('投票ありがとうございます！')" 
+                        data-ja="💥 「か… め… は… め… 波ーーーっ!!!!」（至高の必殺技）" 
+                        data-fr="💥 « KA... ME... HA... ME... HA---!!!! »">
+                    💥 「か… め… は… め… 波ーーーっ!!!!」（至高の必殺技）
+                </button>
+            </div>
+            <p class="poll-note" 
+               data-ja="※その他の熱い名言や思い出があれば、ページ下の「熱い感想・考察リクエスト」からメッセージをお寄せください！" 
+               data-fr="※ Si vous avez d'autres citations ou souvenirs, n'hésitez pas à nous envoyer un message via le formulaire de contact !">
+                ※その他の熱い名言や思い出があれば、ページ下の「熱い感想・考察リクエスト」からメッセージをお寄せください！
+            </p>
         </div>
       </section>
 
-      <!-- 読者投票アンケートコーナー -->
+      <!-- 読者投票アンケートコーナー（もしあなたが悟空の立場なら） -->
       <section id="poll" class="poll-section">
         <div class="poll-badge">INTERACTIVE POLL</div>
         <h3 class="poll-title">★ READERS QUESTION ★</h3>
-        <p class="poll-question">
-          <span data-lang="ja">「もしあなたが悟空の立場なら、どうした？」</span>
-          <span data-lang="en">"If you were Goku, what would you do?"</span>
-          <span data-lang="fr">« Si vous étiez à la place de Sangoku, que feriez-vous ? »</span>
+        <p class="poll-question" 
+           data-ja="「もしあなたが悟空の立場なら、どうした？」" 
+           data-fr="« Si vous étiez à la place de Sangoku, que feriez-vous ? »">
+          「もしあなたが悟空の立場なら、どうした？」
         </p>
         <div class="poll-options">
-          <button class="poll-btn" onclick="alert('投票ありがとうございます！「約束を守るのが男！」派ですね！')">
-            <span data-lang="ja">🔥 「約束は約束！チチと結婚する」</span>
-            <span data-lang="en">🔥 "A promise is a promise! Marry Chichi"</span>
-            <span data-lang="fr">🔥 « Une promesse est une promesse ! Épouser Chichi »</span>
+          <button class="poll-btn" onclick="alert('投票ありがとうございます！')" 
+                  data-ja="🔥 「約束は約束！チチと結婚する」" 
+                  data-fr="🔥 « Une promesse est une promesse ! Épouser Chichi »">
+            🔥 「約束は約束！チチと結婚する」
           </button>
-          <button class="poll-btn" onclick="alert('投票ありがとうございます！「相棒から恋人へ」派ですね！')">
-            <span data-lang="ja">✨ 「やっぱりブルマとの未来を目指す」</span>
-            <span data-lang="en">✨ "Aim for a future with Bulma instead"</span>
-            <span data-lang="fr">✨ « Viser plutôt un avenir avec Bulma »</span>
+          <button class="poll-btn" onclick="alert('投票ありがとうございます！')" 
+                  data-ja="✨ 「やっぱりブルマとの未来を目指す」" 
+                  data-fr="✨ « Viser plutôt un avenir avec Bulma »">
+            ✨ 「やっぱりブルマとの未来を目指す」
           </button>
         </div>
       </section>
 
       <!-- コールアウト考察 -->
       <div class="callout">
-        <strong><span data-lang="ja">考察まとめ</span><span data-lang="en">Conclusion</span><span data-lang="fr">Conclusion</span></strong>
-        <span data-lang="ja">：ブルマとの出会いで世界を知り、チチとの約束で家庭を持った悟空。『ドラゴンボール』の初期を振り返ると、悟空の強さの本質は、拳の強さだけでなく「嘘をつかない純粋さ」と「約束を裏切らない誠実さ」にあるのだと気づかされます。</span>
-        <span data-lang="en">: Goku discovered the world through Bulma and built a family through his promise to Chichi. Goku's true strength lies in his honest, promise-keeping heart.</span>
-        <span data-lang="fr">: Sangoku a découvert le monde grâce à Bulma et a fondé une famille grâce à sa promesse envers Chichi. Sa véritable force réside dans son cœur pur.</span>
+        <strong><span data-ja="考察まとめ" data-fr="Conclusion">考察まとめ</span></strong>：<span 
+          data-ja="ブルマとの出会いで世界を知り、チチとの約束で家庭を持った悟空。『ドラゴンボール』の初期を振り返ると、悟空の強さの本質は、拳の強さだけでなく「嘘をつかない純粋さ」と「約束を裏切らない誠実さ」にあるのだと気づかされます。" 
+          data-fr="Sangoku a découvert le monde grâce à Bulma et a fondé une famille grâce à sa promesse envers Chichi. Sa véritable force réside dans son cœur pur et sa fidélité.">ブルマとの出会いで世界を知り、チチとの約束で家庭を持った悟空。『ドラゴンボール』の初期を振り返ると、悟空の強さの本質は、拳の強さだけでなく「嘘をつかない純粋さ」と「約束を裏切らない誠実さ」にあるのだと気づかされます。</span>
       </div>
 
       <!-- SNSシェア -->
       <div class="share-row">
-        <span class="label" data-lang="ja">この記事を熱く語る：</span>
-        <span class="label" data-lang="en">Share this essay:</span>
-        <span class="label" data-lang="fr">Partager :</span>
-        <a class="share-link btn-twitter" target="_blank" rel="noopener" href="https://twitter.com/intent/tweet?text=%E3%81%AA%E3%81%9C%E6%82%9F%E7%A9%BA%E3%81%AF%E3%83%81%E3%83%81%E3%81%A8%E7%B5%90%E5%A9%9A%E3%81%97%E3%81%9F%E3%81%AE%E3%81%8B%EF%BC%9F%EF%BD%9C%E5%9B%9B%E2%98%86%E7%90%83%E3%81%AE%E3%82%AD%E3%82%BB%E3%82%AD">X (Twitter)</a>
-        <a class="share-link btn-line" target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share?url=">LINE</a>
+        <span class="label" data-ja="この記事を熱く語る：" data-fr="Partager :">この記事を熱く語る：</span>
+        <a class="share-link btn-twitter" target="_blank" rel="noopener" href="file:///C:/Users/PGcca/OneDrive/Desktop/%E3%80%8E%E5%9B%9B%E6%98%9F%E7%90%83%E3%81%AE%E3%82%AD%E3%82%BB%E3%82%AD%20%E3%80%9C%E5%88%9D%E6%9C%9F%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3%E3%83%9C%E3%83%BC%E3%83%AB%E5%BE%B9%E5%BA%95%E8%80%83%E5%AF%9F%E3%80%9C%E3%80%8F/url?id=5">X (Twitter)</a>
+        <a class="share-link btn-line" target="_blank" rel="noopener" href="https://social-plugins.line.me/lineit/share">LINE</a>
       </div>
 
       <!-- プロフィール Section -->
@@ -231,11 +1107,15 @@
         <div class="profile-header">
           <div class="avatar-icon">★</div>
           <div>
-            <h3>管理人：KAZUYA</h3>
-            <p class="profile-tagline">初期ドラゴンボール考察ブロガー</p>
+            <h3><span data-ja="管理人：" data-fr="Administrateur : ">管理人：</span>KAZUYA</h3>
+            <p class="profile-tagline" 
+               data-ja="初期ドラゴンボール考察ブロガー" 
+               data-fr="Blogueur passionné par le début de Dragon Ball">初期ドラゴンボール考察ブロガー</p>
           </div>
         </div>
-        <p class="profile-text">
+        <p class="profile-text" 
+           data-ja="初期の『ドラゴンボール（少年期）』をこよなく愛する考察ブロガー。&#10;悟空がブルマと出会い、筋斗雲に乗り、天下一武道会で熱い泥臭いバトルを繰り広げていたあの頃のワクワク感が忘れられず、ブログを開設しました。&#10;単なる強さのインフレだけではない、鳥山明先生が描いた「キャラクターの人間味」や「技の工夫」を独自の視点で掘り下げていきます。初期DBファンのみなさんと、コメント欄やお問合せから熱く語り合えたら嬉しいです！" 
+           data-fr="Blogueur passionné par la toute première partie de « Dragon Ball (enfance) ». J'ai créé ce blog car je n'ai jamais oublié l'excitation de l'époque où Goku rencontrait Bulma, volait sur le Kinto-un et livrait d'intenses combats acharnés au Championnat du Monde. Au-delà de la simple escalade de puissance, j'explore sous un angle unique l'humanité des personnages et l'ingéniosité des techniques dessinées par Akira Toriyama. Je serais ravi de discuter passionnément avec tous les fans de la première heure via les commentaires ou le formulaire de contact !">
           初期の『ドラゴンボール（少年期）』をこよなく愛する考察ブロガー。<br>
           悟空がブルマと出会い、筋斗雲に乗り、天下一武道会で熱い泥臭いバトルを繰り広げていたあの頃のワクワク感が忘れられず、ブログを開設しました。<br>
           単なる強さのインフレだけではない、鳥山明先生が描いた「キャラクターの人間味」や「技の工夫」を独自の視点で掘り下げていきます。初期DBファンのみなさんと、コメント欄やお問合せから熱く語り合えたら嬉しいです！
@@ -244,79 +1124,36 @@
 
       <!-- お問い合わせフォーム Section -->
       <section id="contact" class="contact-section">
-        <h2>
-          <span data-lang="ja">熱い感想・考察リクエスト</span>
-          <span data-lang="en">Contact & Feedback</span>
-          <span data-lang="fr">Contact & Avis</span>
-        </h2>
-        <p class="contact-desc">
-          <span data-lang="ja">「初期DBのここが好き！」「このエピソードも語ってほしい！」など、あなたの熱いメッセージをお待ちしています！</span>
-          <span data-lang="en">Feel free to send us your thoughts or essay requests!</span>
-          <span data-lang="fr">N'hésitez pas à nous envoyer vos impressions !</span>
-        </p>
+        <h2><span data-ja="熱い感想・考察リクエスト" data-fr="Contact & Avis">熱い感想・考察リクエスト</span></h2>
+        <p class="contact-desc" 
+           data-ja="「初期DBのここが好き！」「このエピソードも語ってほしい！」など、あなたの熱いメッセージをお待ちしています！" 
+           data-fr="N'hésitez pas à nous envoyer vos impressions !">「初期DBのここが好き！」「このエピソードも語ってほしい！」など、あなたの熱いメッセージをお待ちしています！</p>
 
         <form action="https://formsubmit.co/2026webai@gmail.com" method="POST" class="contact-form">
           <div class="form-group">
-            <label for="name">
-              <span data-lang="ja">お名前 / ハンドルネーム</span><span data-lang="en">Name</span><span data-lang="fr">Nom</span>
-            </label>
+            <label for="name"><span data-ja="お名前 / ハンドルネーム" data-fr="Nom">お名前 / ハンドルネーム</span></label>
             <input type="text" id="name" name="name" required placeholder="例：亀仙流門下生">
           </div>
           <div class="form-group">
-            <label for="email">
-              <span data-lang="ja">メールアドレス</span><span data-lang="en">Email</span><span data-lang="fr">E-mail</span>
-            </label>
+            <label for="email"><span data-ja="メールアドレス" data-fr="E-mail">メールアドレス</span></label>
             <input type="email" id="email" name="email" required placeholder="example@email.com">
           </div>
           <div class="form-group">
-            <label for="message">
-              <span data-lang="ja">メッセージ（感想や考察リクエスト）</span>
-              <span data-lang="en">Message</span>
-              <span data-lang="fr">Message</span>
-            </label>
+            <label for="message"><span data-ja="メッセージ（感想や考察リクエスト）" data-fr="Message">メッセージ（感想や考察リクエスト）</span></label>
             <textarea id="message" name="message" rows="5" required placeholder="熱いDB愛をお書きください！"></textarea>
           </div>
-          <button type="submit" class="submit-btn">
-            <span data-lang="ja">かめはめ波級の熱量で送信！</span>
-            <span data-lang="en">Send Message</span>
-            <span data-lang="fr">Envoyer</span>
-          </button>
+          <button type="submit" class="submit-btn"><span data-ja="かめはめ波級の熱量で送信！" data-fr="Envoyer">かめはめ波級の熱量で送信！</span></button>
         </form>
       </section>
 
       <!-- 免責事項 Section -->
       <section id="disclaimer" class="disclaimer-section">
-        <h3>
-          <span data-lang="ja">免責事項・著作権について</span>
-          <span data-lang="en">Disclaimer & Copyright Notice</span>
-          <span data-lang="fr">Mentions Légales & Droits d'Auteur</span>
-        </h3>
-
-        <!-- 日本語 -->
-        <div data-lang="ja" class="disclaimer-text">
-          <p>当ブログ（四星球のキセキ 〜初期ドラゴンボール徹底考察〜）は、個人が趣味で運営する非公式のファンブログであり、版権元である著者、出版社、アニメ制作会社等の各企業様とは一切関係ありません。</p>
-          <p>ブログ内で使用・引用している画像、台詞、キャラクター等の著作権・肖像権・商標権などのすべての知的財産権は、著作者（鳥山明 / とよたろう / バード・スタジオ）、出版社（集英社）、東映アニメーション、およびその権利所有者に帰属します。</p>
-          <p>当ブログは著作権の侵害を目的としたものではありません。記事内の引用につきましては、著作権法第32条で定められた「引用の正当な範囲」を遵守し、出所を明記した上で掲載しております。</p>
-          <p>万が一、掲載内容に不適切な点や、権利を侵害するような箇所がございましたら、大変お手数ですがお問い合わせフォーム（2026webai@gmail.com）より権利所有者様ご本人様からご連絡いただけますようお願い申し上げます。確認後、速やかに削除や修正等の適切な対応をいたします。</p>
-          <p>また、当ブログのコンテンツ・情報につきまして、可能な限り正確な情報を掲載するよう努めておりますが、誤情報が入り込んだり、情報が古くなっていることもございます。当ブログに掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。</p>
-        </div>
-
-        <!-- 英語 -->
-        <div data-lang="en" class="disclaimer-text">
-          <p>This website ("Kiseki of the Four-Star Ball") is an unofficial fan blog operated independently for fan research purposes and is not affiliated with, endorsed by, or connected to the author, publishers, or animation studios.</p>
-          <p>All intellectual property rights, including copyrights, trademarks, and character designs cited on this blog, belong to their respective owners: Akira Toriyama, Toyotarou, Bird Studio, Shueisha, Toei Animation, and related companies.</p>
-          <p>This site does not intend to infringe upon any copyrights. Quotations and imagery are used strictly under fair use / legitimate citation principles for commentary and analytical purposes.</p>
-          <p>If you are a copyright holder and believe any content on this site infringes your rights, please contact us at 2026webai@gmail.com. We will promptly address and remove any requested content upon verification.</p>
-          <p>While we strive for accuracy, the owner assumes no liability for any actions taken based on the information provided on this site.</p>
-        </div>
-
-        <!-- フランス語 -->
-        <div data-lang="fr" class="disclaimer-text">
-          <p>Ce site ("Kiseki of the Four-Star Ball") est un blog de fans non officiel géré à titre privé. Il n'est en aucun cas affilié, approuvé ou lié à l'auteur original, à la maison d'édition ou aux studios d'animation.</p>
-          <p>Tous les droits de propriété intellectuelle, y compris les droits d'auteur et marques cités, appartiennent à leurs propriétaires respectifs : Akira Toriyama, Toyotarou, Bird Studio, Shueisha, Toei Animation et leurs ayants droit.</p>
-          <p>Ce blog n'a aucune intention de porter atteinte aux droits d'auteur. Les citations et images sont utilisées à des fins d'analyse, de critique et d'étude de manière légitime.</p>
-          <p>Si vous êtes titulaire des droits et constatez un contenu inapproprié, veuillez nous contacter via 2026webai@gmail.com. Nous procéderons à la modification ou suppression immédiate après vérification.</p>
-          <p>Le propriétaire décline toute responsabilité quant aux erreurs ou dommages pouvant résulter de l'utilisation des informations présentes sur ce site.</p>
+        <h3><span data-ja="免責事項・著作権について" data-fr="Mentions Légales & Droits d'Auteur">免責事項・著作権について</span></h3>
+        <div class="disclaimer-text">
+          <p data-ja="当ブログ（四星球のキセキ 〜初期ドラゴンボール徹底考察〜）は、個人が趣味で運営する非公式のファンブログであり、版権元である著者、出版社、アニメ制作会社等の各企業様とは一切関係ありません。" 
+             data-fr="Ce site ('四星球のキセキ') est un blog de fans non officiel géré à titre privé.">当ブログ（四星球のキセキ 〜初期ドラゴンボール徹底考察〜）は、個人が趣味で運営する非公式のファンブログであり、版権元である著者、出版社、アニメ制作会社等の各企業様とは一切関係ありません。</p>
+          <p data-ja="ブログ内で使用・引用している画像、台詞、キャラクター等の著作権・肖像権・商標権などのすべての知的財産権は、著作者（鳥山明 / とよたろう / バード・スタジオ）、出版社（集英社）、東映アニメーション、およびその権利所有者に帰属します。" 
+             data-fr="Tous les droits de propriété intellectuelle appartiennent à leurs propriétaires respectifs : Akira Toriyama, Shueisha, Toei Animation, etc.">ブログ内で使用・引用している画像、台詞、キャラクター等の著作権・肖像権・商標権などのすべての知的財産権は、著作者（鳥山明 / とよたろう / バード・スタジオ）、出版社（集英社）、東映アニメーション、およびその権利所有者に帰属します。</p>
         </div>
       </section>
 
@@ -331,37 +1168,37 @@
     </div>
   </footer>
 
-  <!-- 言語切り替えJS -->
+  <!-- JavaScript 言語切替ロジック -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const buttons = document.querySelectorAll('.lang-btn');
-      
-      function setLanguage(lang) {
-        document.querySelectorAll('[data-lang]').forEach(el => {
-          if (el.getAttribute('data-lang') === lang) {
-            if (['DIV', 'P', 'SECTION'].includes(el.tagName)) {
-              el.style.display = 'block';
+
+      function changeLanguage(lang) {
+        document.querySelectorAll('[data-ja]').forEach(el => {
+          const text = el.getAttribute(`data-${lang}`);
+          if (text) {
+            if (text.includes('\n') || text.includes('<br>')) {
+              el.innerHTML = text.replace(/\n/g, '<br>');
             } else {
-              el.style.display = 'inline';
+              el.innerHTML = text;
             }
-          } else {
-            el.style.display = 'none';
           }
         });
 
         buttons.forEach(btn => {
-          btn.classList.toggle('active', btn.getAttribute('data-set-lang') === lang);
+          const isTarget = btn.getAttribute('data-lang') === lang || (lang === 'ja' && btn.id === 'btn-ja') || (lang === 'fr' && btn.id === 'btn-fr');
+          btn.classList.toggle('active', isTarget);
         });
+
+        document.documentElement.lang = lang;
       }
 
       buttons.forEach(btn => {
         btn.addEventListener('click', () => {
-          const lang = btn.getAttribute('data-set-lang');
-          setLanguage(lang);
+          const targetLang = btn.getAttribute('data-lang') || (btn.id === 'btn-ja' ? 'ja' : 'fr');
+          changeLanguage(targetLang);
         });
       });
-
-      setLanguage('ja');
     });
   </script>
 </body>
